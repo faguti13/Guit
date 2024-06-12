@@ -1,0 +1,6 @@
+@GuitServer_HostAddress = http://localhost:5122
+
+GET {{GuitServer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
