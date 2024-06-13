@@ -1,6 +1,12 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using GuitServer.Data; // Asegúrate de que esta es la directiva correcta para tu namespace
+using GuitServer.Models;
+using GuitServer.Data;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -26,6 +32,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+// Endpoint de ejemplo
 var summaries = new[]
 {
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -46,14 +53,29 @@ app.MapGet("/weatherforecast", () =>
 .WithName("GetWeatherForecast")
 .WithOpenApi();
 
-// Agregar rutas para manejar comandos específicos
-app.MapPost("/commands/init", () =>
+// Integración del endpoint para el comando init
+app.MapPost("/commands/init", async ([FromServices] ApplicationDbContext context, [FromBody] string name) =>
 {
-    // Lógica para manejar el comando init
-    // Por ejemplo, inicializar configuraciones o datos necesarios
-    return Results.Ok("Comando init procesado");
+    // Verificar si el repositorio ya existe
+    var existingRepo = await context.Repositorios.FirstOrDefaultAsync(r => r.Nombre == name);
+    if (existingRepo != null)
+    {
+        return Results.BadRequest($"El repositorio '{name}' ya existe.");
+    }
+
+    // Crear un nuevo repositorio
+    var newRepo = new Repositorio
+    {
+        Nombre = name,
+        FechaCreacion = DateTime.Now
+    };
+    context.Repositorios.Add(newRepo);
+    await context.SaveChangesAsync();
+
+    return Results.Ok($"Repositorio '{name}' creado con éxito.");
 });
 
+// Endpoint para manejar el comando add
 app.MapPost("/commands/add", (string item) =>
 {
     // Lógica para manejar el comando add

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GuitServer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d7c48e809104b916d9ba7679bd57758ca9af066")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6254063b07328ff1a087114f8c644354f2aa1a4c")]
 [assembly: System.Reflection.AssemblyProductAttribute("GuitServer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GuitServer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

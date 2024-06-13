@@ -67,6 +67,8 @@ int main(int argc, char* argv[]) {
     } else if (command == "add") {
         handler.add(argc, argv);
         makePostRequest("add");
+    } else if (command == "help") {
+        handler.help();
     } else {
         std::cerr << "Unknown command: " << command << std::endl;
     }
