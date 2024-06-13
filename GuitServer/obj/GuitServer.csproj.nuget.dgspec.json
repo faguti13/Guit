@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/fabiangj/Descargas/guit/GuitServer/GuitServer.csproj": {}
+    "/home/fabiangj/Guit/GuitServer/GuitServer.csproj": {}
   },
   "projects": {
-    "/home/fabiangj/Descargas/guit/GuitServer/GuitServer.csproj": {
+    "/home/fabiangj/Guit/GuitServer/GuitServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/fabiangj/Descargas/guit/GuitServer/GuitServer.csproj",
+        "projectUniqueName": "/home/fabiangj/Guit/GuitServer/GuitServer.csproj",
         "projectName": "GuitServer",
-        "projectPath": "/home/fabiangj/Descargas/guit/GuitServer/GuitServer.csproj",
+        "projectPath": "/home/fabiangj/Guit/GuitServer/GuitServer.csproj",
         "packagesPath": "/home/fabiangj/.nuget/packages/",
-        "outputPath": "/home/fabiangj/Descargas/guit/GuitServer/obj/",
+        "outputPath": "/home/fabiangj/Guit/GuitServer/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/fabiangj/.nuget/NuGet/NuGet.Config"

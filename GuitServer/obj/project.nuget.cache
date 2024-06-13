@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BwzfVM1CGeKNmJzKQ48Qty4zI/Yyfq2YxTeg/NENUS8b2MItPZ4EQJb8u/exAnekIgC08MR+jWI3p8MiwNZ75A==",
+  "dgSpecHash": "nss6iRIaeuGb7gw1q45KRf00eSTLfWZtBsi8GCPYTgs1fe4vfBdjngyHhmPPPARyfH0PelXkCzGgsfBp/CQ5qw==",
   "success": true,
-  "projectFilePath": "/home/fabiangj/Descargas/guit/GuitServer/GuitServer.csproj",
+  "projectFilePath": "/home/fabiangj/Guit/GuitServer/GuitServer.csproj",
   "expectedPackageFiles": [
     "/home/fabiangj/.nuget/packages/bouncycastle.cryptography/2.2.1/bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "/home/fabiangj/.nuget/packages/google.protobuf/3.25.1/google.protobuf.3.25.1.nupkg.sha512",

@@ -46,6 +46,21 @@ app.MapGet("/weatherforecast", () =>
 .WithName("GetWeatherForecast")
 .WithOpenApi();
 
+// Agregar rutas para manejar comandos específicos
+app.MapPost("/commands/init", () =>
+{
+    // Lógica para manejar el comando init
+    // Por ejemplo, inicializar configuraciones o datos necesarios
+    return Results.Ok("Comando init procesado");
+});
+
+app.MapPost("/commands/add", (string item) =>
+{
+    // Lógica para manejar el comando add
+    // 'item' representa el elemento a agregar, procesamiento según sea necesario
+    return Results.Ok($"Item {item} agregado correctamente");
+});
+
 app.Run();
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
